@@ -29,7 +29,10 @@ export class AdminPanelBusesComponent implements OnInit {
       .subscribe((busStops) => (this.busStops = Object.values(busStops)));
 
     this.defaultBusStopForm = new FormGroup({
-      defaultBusStop: new FormControl(null, Validators.required),
+      defaultBusStop: new FormControl(
+        this.localBusStorageService.getData("selectedBusStop") || null,
+        Validators.required
+      ),
     });
   }
 

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div>
-      <form [formGroup]="defaultBusStopForm" (ngSubmit)="(onSubmit)">
+      <form [formGroup]="defaultBusStopForm" (ngSubmit)="onSubmit()">
         <div id="user-data">
           <div class="form-group">
             <label for="defaultBusStop" class="defaultBusStop"
@@ -22,9 +22,8 @@
           </div>
         </div>
         <button
-          type="button"
+          type="submit"
           class="btn btn-primary"
-          (click)="onSubmit()"
           [disabled]="defaultBusStopForm.invalid"
         >
           Submit
@@ -33,4 +32,3 @@
     </div>
   </div>
 </div>
-
