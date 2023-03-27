@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sii-widgets": {
+    "zielona-gora-buses": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -41,21 +41,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sii-widgets",
+            "outputPath": "dist/zielona-gora-buses",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -89,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sii-widgets:build:production"
+              "browserTarget": "zielona-gora-buses:build:production"
             },
             "development": {
-              "browserTarget": "sii-widgets:build:development"
+              "browserTarget": "zielona-gora-buses:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,10 +93,13 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sii-widgets:build"
+            "browserTarget": "zielona-gora-buses:build"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
