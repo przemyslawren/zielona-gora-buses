@@ -95,6 +95,9 @@
           "options": {
             "browserTarget": "zielona-gora-buses:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
